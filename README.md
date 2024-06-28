@@ -84,7 +84,7 @@ public class PersonService {
 
 By using the DN, you ensure that each entry in your LDAP directory is uniquely identifiable and can be precisely located within the directory hierarchy.
 
-## <img src="https://user-images.githubusercontent.com/74038190/212257467-871d32b7-e401-42e8-a166-fcfd7baa4c6b.gif" width ="25" style="margin-bottom: -5px;"> what is ou in LDAP ?
+## <img src="https://user-images.githubusercontent.com/74038190/212257467-871d32b7-e401-42e8-a166-fcfd7baa4c6b.gif" width ="25" style="margin-bottom: -5px;"> what is `ou` in LDAP ?
 
 In LDAP (Lightweight Directory Access Protocol), ou stands for "Organizational Unit". It is a container within the directory structure that helps organize objects (such as users, groups, or other organizational units) in a hierarchical manner. Organizational units are used to partition and manage directory entries based on administrative or functional criteria.
 
@@ -98,3 +98,24 @@ Here are some key points about ou in LDAP:
 
 
 In summary, ou in LDAP serves as a fundamental building block for organizing and managing directory entries in a hierarchical manner, facilitating efficient administration and access control within the directory service.
+
+
+## <img src="https://user-images.githubusercontent.com/74038190/212257467-871d32b7-e401-42e8-a166-fcfd7baa4c6b.gif" width ="25" style="margin-bottom: -5px;"> what is `objectClass` in LDAP ?
+
+In LDAP (Lightweight Directory Access Protocol), `objectClass` is a fundamental attribute used to define the type or class of an LDAP entry. Each LDAP entry must have at least one `objectClass` attribute, which specifies the set of attributes that the entry must or can have.
+
+### Purpose of objectClass:
+- **Classification**: `objectClass` categorizes entries into different types, such as `inetOrgPerson` for individuals, `organizationalUnit` for organizational units, `groupOfNames` for groups, and more.
+- **Schema Compliance**: It ensures that LDAP entries adhere to predefined schema rules by requiring specific attributes based on the chosen `objectClass`.
+
+### Usage Example:
+When creating or modifying entries in LDAP:
+```ldif
+dn: cn=John Doe,ou=Users,dc=example,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+cn: John Doe
+sn: Doe
+givenName: John
+mail: john.doe@example.com
