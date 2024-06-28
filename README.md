@@ -21,32 +21,54 @@ In Spring Data LDAP, the DN is crucial because it acts as the primary key for LD
 
 
 ```java
-import javax.naming.Name;
+import lombok.Getter;
+import lombok.Setter;
+import org.springframework.ldap.odm.annotations.Attribute;
 import org.springframework.ldap.odm.annotations.Entry;
 import org.springframework.ldap.odm.annotations.Id;
-import org.springframework.ldap.odm.annotations.Attribute;
 
-@Entry(base = "ou=people", objectClasses = { "inetOrgPerson", "organizationalPerson" })
+import javax.naming.Name;
+
+@Setter
+@Getter
+@Entry(
+		base = "ou=users",
+		objectClasses = { "person", "inetOrgPerson", "top", "organizationalPerson" })
 public class Person {
-    @Id
-    private Name id; // This field holds the DN of the LDAP entry.
+	@Id
+	private Name id;
 
-    @Attribute(name = "cn")
-    private String commonName;
+	@Attribute(name = "cn")
+	private String username;
 
-    @Attribute(name = "sn")
-    private String surname;
+	@Attribute(name = "sn")
+	private String surname;
 
-    @Attribute(name = "mail")
-    private String email;
+	@Attribute(name = "userPassword")
+	private String password;
 
-    @Attribute(name = "uid")
-    private String uid;
+	public Person() {
+	}
 
-    @Attribute(name = "userPassword")
-    private String password;
+	public Person(String username, String surname) {
+		this.username = username;
+		this.surname = surname;
+	}
 
-    // Getters and setters
+	public Person(Name id, String username, String surname, String password) {
+		this.id = id;
+		this.username = username;
+		this.surname = surname;
+		this.password = password;
+	}
+
+	public Person(String username, String surname, String password) {
+		this.username = username;
+		this.surname = surname;
+		this.password = password;
+	}
+
+
 }
 ```
 
