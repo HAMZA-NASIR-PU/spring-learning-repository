@@ -32,7 +32,7 @@ import javax.naming.Name;
 @Setter
 @Getter
 @Entry(
-		base = "ou=users",
+		base = "ou=users,ou=system",
 		objectClasses = { "person", "inetOrgPerson", "top", "organizationalPerson" })
 public class Person {
 	@Id
