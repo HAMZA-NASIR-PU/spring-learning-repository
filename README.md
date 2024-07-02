@@ -141,3 +141,17 @@ cn: John Doe
 sn: Doe
 givenName: John
 mail: john.doe@example.com
+
+
+### What is RabbitMQ ?
+
+RabbitMQ is an open-source message broker software that facilitates communication between different components of a distributed application. It implements the Advanced Message Queuing Protocol (AMQP) and can be used to:
+
+- `Decouple Producers and Consumers`: Producers (which send messages) and consumers (which receive messages) do not need to know about each other.
+- `Load Balancing`: Distributes workloads evenly across multiple consumers.
+- `Asynchronous Communication`: Allows components to communicate without needing to be available at the same time.
+- `Reliability and Persistence`: Ensures that messages are delivered and not lost, even if a consumer or the broker fails.
+
+Both RabbitMQ and Kafka solve the problem of enabling communication between different parts of a distributed system
+
+
