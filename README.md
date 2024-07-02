@@ -141,7 +141,7 @@ cn: John Doe
 sn: Doe
 givenName: John
 mail: john.doe@example.com
-
+```
 
 ### What is RabbitMQ ?
 
@@ -153,5 +153,3 @@ RabbitMQ is an open-source message broker software that facilitates communicatio
 - `Reliability and Persistence`: Ensures that messages are delivered and not lost, even if a consumer or the broker fails.
 
 Both RabbitMQ and Kafka solve the problem of enabling communication between different parts of a distributed system
-
-
