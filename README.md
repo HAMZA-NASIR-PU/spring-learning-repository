@@ -143,7 +143,7 @@ givenName: John
 mail: john.doe@example.com
 ```
 
-## What is RabbitMQ ?
+## <img src="https://user-images.githubusercontent.com/74038190/212257467-871d32b7-e401-42e8-a166-fcfd7baa4c6b.gif" width ="25" style="margin-bottom: -5px;"> What is RabbitMQ ?
 
 RabbitMQ is an open-source message broker software that facilitates communication between different components of a distributed application. It implements the Advanced Message Queuing Protocol (AMQP) and can be used to:
 
@@ -155,7 +155,7 @@ RabbitMQ is an open-source message broker software that facilitates communicatio
 Both RabbitMQ and Kafka solve the problem of enabling communication between different parts of a distributed system
 
 
-## What is Spring Data?
+## <img src="https://user-images.githubusercontent.com/74038190/212257467-871d32b7-e401-42e8-a166-fcfd7baa4c6b.gif" width ="25" style="margin-bottom: -5px;"> What is Spring Data?
 
 Spring Data is a part of the larger Spring Framework and is designed to simplify data access and manipulation, particularly in database-driven applications. It provides a unified and consistent API for working with various databases, including both relational databases (like MySQL, PostgreSQL) and NoSQL databases (like MongoDB, Cassandra). The goal of Spring Data is to eliminate much of the boilerplate code needed for data access layers and to provide easier ways to perform CRUD (Create, Read, Update, Delete) operations, queries, pagination, and more.
 
